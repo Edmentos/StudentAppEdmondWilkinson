@@ -7,6 +7,12 @@ public class Person {
     private String email;
     private String course;
 
+    public Person() {
+        // You can choose to initialize variables here or leave them empty
+        this.name = "";
+        this.email = "";
+        this.course = "";
+    }
 
     public void getUserInput() {
         Scanner scanner = new Scanner(System.in);
@@ -21,11 +27,7 @@ public class Person {
         this.course = scanner.nextLine();
     }
 
-
-    public Person() {
-
-    }
-
+    //Getters and setters
     public String getName() {
         return name;
     }
@@ -50,7 +52,33 @@ public class Person {
         this.course = course;
     }
 
+
+    //Display Info
     public void displayInfo() {
         System.out.println("Name: " + name + "  Email:" + email + "  Course: " + course);
     }
+
+
+    public Person(String name, String email, String course) {
+        this.name = name;
+        this.email = email;
+        this.course = course;
+    }
+
+    public Person(String name) {
+        this.name = name;
+        this.email = "";
+        this.course = "";
+    }
+
+    public void getUser2Input() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Email: ");
+        this.email = scanner.nextLine();
+
+        System.out.print("Enter Course: ");
+        this.course = scanner.nextLine();
+    }
 }
+
